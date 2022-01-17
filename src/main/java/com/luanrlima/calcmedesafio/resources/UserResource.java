@@ -1,5 +1,6 @@
 package com.luanrlima.calcmedesafio.resources;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import java.net.URI;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -13,7 +14,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
@@ -21,6 +21,7 @@ import com.luanrlima.calcmedesafio.DTO.UserDTO;
 import com.luanrlima.calcmedesafio.domain.User;
 import com.luanrlima.calcmedesafio.services.UserService;
 
+@CrossOrigin(origins = "http://localhost:4200" )
 @RestController
 @RequestMapping(value="usuarios")
 public class UserResource {

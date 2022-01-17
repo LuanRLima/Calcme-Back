@@ -14,15 +14,17 @@ public class User implements Serializable {
 	private String id;
 	private String name;
 	private String email;
+	private String phone;
 	
 	public User() {
 	}
 
-	public User(String id, String name, String email) {
+	public User(String id, String name, String email, String phone) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.email = email;
+		this.phone = phone;
 	}
 
 	public String getId() {
@@ -49,9 +51,21 @@ public class User implements Serializable {
 		this.email = email;
 	}
 
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
 	@Override
 	public int hashCode() {
-		return Objects.hash(email, id);
+		return Objects.hash(email, id, phone);
 	}
 
 	@Override
@@ -63,7 +77,9 @@ public class User implements Serializable {
 		if (getClass() != obj.getClass())
 			return false;
 		User other = (User) obj;
-		return Objects.equals(email, other.email) && Objects.equals(id, other.id);
+		return Objects.equals(email, other.email) && Objects.equals(id, other.id) && Objects.equals(phone, other.phone);
 	}
+
+	
 	
 }
