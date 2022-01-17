@@ -11,6 +11,7 @@
 	<groupId>com.luanrlima</groupId>
 	<artifactId>calcmedesafio</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
 	<name>calcmedesafio</name>
 	<description>Desafio -CALCME - Vaga Desenvolvedor</description>
 	<properties>
@@ -20,12 +21,18 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+			
 		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-mongodb</artifactId>
 		</dependency>
 		
 		<dependency>
